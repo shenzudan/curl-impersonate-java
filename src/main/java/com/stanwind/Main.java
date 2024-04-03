@@ -1,5 +1,7 @@
 package com.stanwind;
 
+import java.net.MalformedURLException;
+
 /**
  * ${NAME} ${description}
  *
@@ -8,7 +10,9 @@ package com.stanwind;
  * @date :  2024/4/3 11:09
  **/
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    public static void main(String[] args) throws MalformedURLException {
+        CurlWrapper curl = new CurlWrapper();
+        String s = curl.curlVersion();
+        System.out.println(s);
     }
 }
